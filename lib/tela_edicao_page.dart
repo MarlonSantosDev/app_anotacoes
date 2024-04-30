@@ -1,4 +1,3 @@
-import 'package:app_anotacoes/global/global.dart';
 import 'package:flutter/material.dart';
 
 class TelaEdicaoPage extends StatefulWidget {
@@ -10,15 +9,12 @@ class TelaEdicaoPage extends StatefulWidget {
 }
 
 class _TelaEdicaoPageState extends State<TelaEdicaoPage> {
-
   String titulo = "";
   String descricao = "";
 
   @override
   initState() {
     super.initState();
-    titulo = ajustarTexto(widget.item.keys);
-    descricao = ajustarTexto(widget.item.values);
   }
 
   @override
@@ -58,20 +54,12 @@ class _TelaEdicaoPageState extends State<TelaEdicaoPage> {
       floatingActionButton: FloatingActionButton(
         tooltip: 'Salvar',
         onPressed: () {
-          if (titulo.isNotEmpty && descricao.isNotEmpty) {
-            Map<String, dynamic> item = {titulo: descricao};
-            Navigator.pop(context, item);
-          } else {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('Preencha todos os campos'),
-              ),
-            );
-          }
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Faça alguma coisa aqui para salvar!'),
+            ),
+          );
         },
-        child: const Icon(
-          Icons.save_outlined,
-        ),
       ),
     );
   }

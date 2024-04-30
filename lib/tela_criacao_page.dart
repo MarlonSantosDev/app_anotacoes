@@ -45,22 +45,12 @@ class _TelaCriacaoPageState extends State<TelaCriacaoPage> {
       floatingActionButton: FloatingActionButton(
         tooltip: 'Salvar',
         onPressed: () {
-          if (titulo.isNotEmpty && descricao.isNotEmpty) {
-            Map<String, dynamic> item = {
-              titulo: descricao
-            };
-            Navigator.pop(context, item);
-          } else {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('Preencha todos os campos'),
-              ),
-            );
-          }
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Faça alguma coisa aqui para salvar!'),
+            ),
+          );
         },
-        child: const Icon(
-          Icons.save_outlined,
-        ),
       ),
     );
   }
