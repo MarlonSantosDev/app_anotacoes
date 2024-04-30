@@ -12,7 +12,6 @@ import 'package:flutter/material.dart';
  Faça utilizado alguma gerencia de estado
  (Opcionais)
  O aplicativo tem de recuperar as anotacoes criadas quando é aberto (Faça uma chamada API ou Shared Preferences) 
- 
  */
 
 void main() {
